@@ -12,7 +12,7 @@ export const Button = () => {
         theContext.setContext({
           ...theContext.context,
           count: count + 1,
-          payLoad: new Date().toLocaleString('pt-BR'),
+          payLoad: new Date().toLocaleDateStringString('pt-BR'),
         })
       }
     >
