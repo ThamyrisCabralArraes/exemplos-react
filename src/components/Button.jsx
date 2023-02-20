@@ -3,6 +3,20 @@ import { globalContext } from '../App';
 
 export const Button = () => {
   const theContext = useContext(globalContext);
-  const { count } = theContext.context;
-  return <button onClick={() => theContext.setContext({ count: count + 1 })}>incrementar</button>;
+  const {
+    context: { count },
+  } = theContext;
+  return (
+    <button
+      onClick={() =>
+        theContext.setContext({
+          ...theContext.context,
+          count: count + 1,
+          payLoad: new Date().toLocaleString('pt-BR'),
+        })
+      }
+    >
+      incrementar
+    </button>
+  );
 };

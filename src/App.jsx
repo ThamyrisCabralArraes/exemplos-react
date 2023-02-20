@@ -7,6 +7,8 @@ export const globalContext = React.createContext();
 
 const countNumbers = {
   count: 0,
+  title: 'Meu contador:',
+  payLoad: '',
 };
 
 function App() {
