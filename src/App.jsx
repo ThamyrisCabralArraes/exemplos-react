@@ -24,18 +24,11 @@ export const reducer = (state, action) => {
 function App() {
   const [context, setContext] = useState(countNumbers);
   const [state, dispatch] = useReducer(reducer, countNumbers);
-  const [contador, setContador] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setContador((c) => c);
-    }, 2000);
-  });
   return (
     <globalContext.Provider value={{ context, setContext, state, dispatch }}>
       <div className='App'>
         <Div />
-        <h2>Contador {contador}</h2>
       </div>
     </globalContext.Provider>
   );
